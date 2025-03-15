@@ -8,7 +8,6 @@ import { ShipmentAnalytics } from "@/components/ShipmentAnalytics";
 import { TopItemsSection } from "@/components/TopItemsSection";
 import { SpotlightMap } from "@/components/SpotlightMap";
 import { ChevronDown, FileText, ShoppingCart, TrendingUp, Wallet } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 
 const Dashboard = () => {
   return (
@@ -78,12 +77,11 @@ const Dashboard = () => {
               <ShipmentAnalytics />
             </div>
             
-            <div className="mb-6">
-              <TopItemsSection />
-            </div>
-            
-            <div>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
               <SpotlightMap />
+              <div className="lg:col-span-2">
+                <TopItemsSection />
+              </div>
             </div>
           </div>
         </main>
